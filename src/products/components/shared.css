@@ -1,0 +1,57 @@
+.products-components__container-list {
+  margin-top: 24px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.products-components__container-list-content {
+  width: 95%;
+  margin: 24px auto;
+  overflow-x: auto;
+  box-shadow: 0 0 4px 2px rgba(0, 0, 0, 0.1);
+}
+
+.products-components__container-list span {
+  color: #55c4d1;
+}
+
+.products-components__item-modal-btn button {
+  margin: 0 8px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border-bottom: 1px solid #ddd;
+  border-right: 1px solid #ddd;
+  text-align: center;
+  padding: 8px;
+}
+
+th {
+  border: 1px solid #55c4d1;
+}
+
+.products-compontents__edit-item:last-child {
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+.spacer {
+  margin-top: 12px;
+}
+
+tr:hover {
+  background-color: #f1f0f0;
+}
+
+.table-sum {
+  font-weight: bold;
+}

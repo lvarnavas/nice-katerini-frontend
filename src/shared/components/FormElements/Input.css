@@ -1,0 +1,80 @@
+.form-control {
+  margin: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.form-control label,
+.form-control input,
+.form-control textarea {
+  display: block;
+}
+
+.form-control label {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.form-control input {
+  width: 100%;
+  font: inherit;
+  border: 1px solid #ccc;
+  background: #f8f8f8;
+  padding: 0.15rem 0.25rem;
+  text-align: center;
+}
+
+.form-control date {
+  width: 100%;
+  font: inherit;
+  border: 1px solid #ccc;
+  background: #f8f8f8;
+  padding: 0.15rem 0.25rem;
+}
+
+.form-control select {
+  width: 100%;
+  font: inherit;
+  border: 1px solid #ccc;
+  background: #f8f8f8;
+  padding: 0.15rem 0.25rem;
+}
+
+.form-control select:focus {
+  outline: none;
+}
+
+.form-control textarea {
+  width: 100%;
+  height: 150px;
+  font: inherit;
+  border: 1px solid #ccc;
+  padding: 0.15rem 0.25rem;
+}
+
+.form-control input:focus {
+  outline: none;
+}
+
+.form-control textarea:focus {
+  outline: none;
+  border-color: #510077;
+  background: #f8f8f8;
+}
+
+.form-control--invalid label,
+.form-control--invalid p {
+  color: red;
+}
+
+.form-control--invalid p {
+  grid-column: 2;
+}
+
+.form-control--invalid input,
+.form-control--invalid textarea,
+.form-control--invalid select {
+  border-color: red;
+  background: #ffd1d1;
+}

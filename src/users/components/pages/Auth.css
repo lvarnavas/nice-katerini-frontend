@@ -1,0 +1,16 @@
+.authentication__header {
+  color: white;
+  text-align: center;
+}
+
+.authentication {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+}
+
+.authentication-card {
+  padding-bottom: 32px;
+}
