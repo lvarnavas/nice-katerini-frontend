@@ -30,7 +30,7 @@ const TotalCarLoadsList = (props) => {
 
   const getCustomColumnName = (columnName) => {
     if (columnName === "Pinakida") {
-      return (columnName = "Πινακίδα");
+      return (columnName = "Υπάλληλος");
     }
     return columnName;
   };

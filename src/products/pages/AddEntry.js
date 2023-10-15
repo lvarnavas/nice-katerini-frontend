@@ -74,7 +74,7 @@ const AddEntry = () => {
       setCarList(originalCarList.filter((car) => car.pinakida !== "ΝΤΑΛΙΚΑ"));
     } else if (
       selectedOption === "Επιστροφή" ||
-      selectedOption === "Καταστροφή οχήματος"
+      selectedOption === "Καταστροφή"
     ) {
       setCarList(
         originalCarList.filter(
@@ -156,7 +156,7 @@ const AddEntry = () => {
         );
         setShowSuccessModal(true);
       } catch (err) {}
-    } else if (selectedOption === "Καταστροφή οχήματος") {
+    } else if (selectedOption === "Καταστροφή") {
       try {
         setShowSuccessModal(false);
         await sendRequest(
@@ -217,7 +217,7 @@ const AddEntry = () => {
           date
         )}&enddate=${formatDate(date)}`
       );
-    } else if (selectedOption === "Καταστροφή οχήματος") {
+    } else if (selectedOption === "Καταστροφή") {
       history.push(
         `/destructions/total-car-destructions?startdate=${formatDate(
           date
@@ -262,7 +262,7 @@ const AddEntry = () => {
           </option>
           <option value="Φόρτωμα">Φόρτωμα</option>
           <option value="Επιστροφή">Επιστροφή</option>
-          <option value="Καταστροφή οχήματος">Καταστροφή οχήματος</option>
+          <option value="Καταστροφή">Καταστροφή</option>
           <option value="Καταστροφή αποθήκης">Καταστροφή αποθήκης</option>
           <option value="Παραλαβή νταλίκας">Παραλαβή νταλίκας</option>
         </select>
@@ -333,7 +333,7 @@ const AddEntry = () => {
               selectedOption !== "Παραλαβή νταλίκας" && (
                 <select value={selectedCar} onChange={handleCarSelect}>
                   <option value="" disabled>
-                    Επιλογή οχήματος
+                    Επιλογή υπαλλήλου
                   </option>
                   {carList.map((car) => (
                     <option key={car.id} value={car.id}>

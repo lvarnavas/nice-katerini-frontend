@@ -43,7 +43,7 @@ const NavLinks = (props) => {
             <NavLink
               to={`/destructions/total-car-destructions?startdate=${currentDate()}&enddate=${currentDate()}`}
             >
-              ΚΑΤΑΣΤΡΟΦΕΣ ΟΧΗΜΑΤΩΝ
+              ΚΑΤΑΣΤΡΟΦΕΣ ΥΠΑΛΛΗΛΩΝ
             </NavLink>
             <NavLink
               to={`/destructions/total-warehouse-destructions?startdate=${currentDate()}&enddate=${currentDate()}`}
@@ -66,6 +66,13 @@ const NavLinks = (props) => {
       {auth.isLoggedIn && (
         <li>
           <NavLink to="/addentry">ΚΑΤΑΧΩΡΗΣΗ</NavLink>
+        </li>
+      )}
+      {!auth.isLoggedIn && (
+        <li>
+          <a href="https://nicewh.gr" target="_blank" rel="noopener noreferrer">
+            ΑΠΟΘΗΚΗ ΘΕΣΣΑΛΟΝΙΚΗΣ
+          </a>
         </li>
       )}
       {!auth.isLoggedIn && (

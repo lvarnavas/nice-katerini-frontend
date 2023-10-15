@@ -35,7 +35,7 @@ const SearchPage = () => {
         const carListData = await sendRequest(
           process.env.REACT_APP_BACKEND_URL + "/products/get-car-list"
         );
-        if (searchType === "Αναζήτηση βάσει οχήματος") {
+        if (searchType === "Αναζήτηση βάσει υπαλλήλου") {
           setCarList(
             carListData.carslist.filter((car) => car.pinakida !== "ΝΤΑΛΙΚΑ")
           );
@@ -45,7 +45,7 @@ const SearchPage = () => {
       } catch (err) {}
     };
     if (
-      searchType === "Αναζήτηση βάσει οχήματος" ||
+      searchType === "Αναζήτηση βάσει υπαλλήλου" ||
       searchType === "Αναζήτηση παραλαβών νταλίκας"
     ) {
       fetchCarList();
@@ -65,9 +65,9 @@ const SearchPage = () => {
     formattedEndDate = formatDate(endDate);
 
     const dropDownOptions = {
-      "Αναζήτηση βάσει οχήματος": "",
+      "Αναζήτηση βάσει υπαλλήλου": "",
       "Αναζήτηση συνολικών φορτωμάτων": "/loads/total-car-loads",
-      "Αναζήτηση συνολικών καταστροφών οχημάτων":
+      "Αναζήτηση συνολικών καταστροφών υπαλλήλων":
         "/destructions/total-car-destructions",
       "Αναζήτηση συνολικών επιστροφών": "/returns/total-car-returns",
       "Αναζήτηση καταστροφών αποθήκης":
@@ -109,7 +109,7 @@ const SearchPage = () => {
   const renderForm = () => {
     switch (searchType) {
       case "Αναζήτηση συνολικών φορτωμάτων":
-      case "Αναζήτηση συνολικών καταστροφών οχημάτων":
+      case "Αναζήτηση συνολικών καταστροφών υπαλλήλων":
       case "Αναζήτηση συνολικών επιστροφών":
       case "Αναζήτηση καταστροφών αποθήκης":
       case "Αναζήτηση παραλαβών νταλίκας":
@@ -143,7 +143,7 @@ const SearchPage = () => {
             </div>
           </>
         );
-      case "Αναζήτηση βάσει οχήματος":
+      case "Αναζήτηση βάσει υπαλλήλου":
         return (
           <>
             <select
@@ -151,7 +151,7 @@ const SearchPage = () => {
               onChange={(e) => setSelectedCar(e.target.value)}
             >
               <option value="" disabled>
-                Επιλέξτε όχημα
+                Επιλέξτε υπάλληλο
               </option>
               {carList.map((car) => (
                 <option key={car.id} value={car.id}>
@@ -239,8 +239,8 @@ const SearchPage = () => {
           <option value="Αναζήτηση συνολικών φορτωμάτων">
             Αναζήτηση συνολικών φορτωμάτων
           </option>
-          <option value="Αναζήτηση συνολικών καταστροφών οχημάτων">
-            Αναζήτηση συνολικών καταστροφών οχημάτων
+          <option value="Αναζήτηση συνολικών καταστροφών υπαλλήλων">
+            Αναζήτηση συνολικών καταστροφών υπαλλήλων
           </option>
           <option value="Αναζήτηση καταστροφών αποθήκης">
             Αναζήτηση καταστροφών αποθήκης
@@ -248,8 +248,8 @@ const SearchPage = () => {
           <option value="Αναζήτηση συνολικών επιστροφών">
             Αναζήτηση συνολικών επιστροφών
           </option>
-          <option value="Αναζήτηση βάσει οχήματος">
-            Αναζήτηση βάσει οχήματος
+          <option value="Αναζήτηση βάσει υπαλλήλου">
+            Αναζήτηση βάσει υπαλλήλου
           </option>
           <option value="Αναζήτηση παραλαβών νταλίκας">
             Αναζήτηση παραλαβών νταλίκας
