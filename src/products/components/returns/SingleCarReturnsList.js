@@ -42,7 +42,7 @@ const SingleCarReturnsList = (props) => {
     <div className="products-components__container-list ">
       <Card>
         <h2>
-          ΕΠΙΣΤΡΟΦΕΣ ΟΧΗΜΑΤΟΣ <span>{props.carName}</span> ΑΠΟ{" "}
+          ΕΠΙΣΤΡΟΦΕΣ ΟΔΗΓΟΥ <span>{props.carName}</span> ΑΠΟ{" "}
           <span>{formattedStartDate}</span> ΕΩΣ <span>{formattedEndDate}</span>
         </h2>
       </Card>

@@ -35,7 +35,7 @@ const SearchPage = () => {
         const carListData = await sendRequest(
           process.env.REACT_APP_BACKEND_URL + "/products/get-car-list"
         );
-        if (searchType === "Αναζήτηση βάσει υπαλλήλου") {
+        if (searchType === "Αναζήτηση βάσει οδηγού") {
           setCarList(
             carListData.carslist.filter((car) => car.pinakida !== "ΝΤΑΛΙΚΑ")
           );
@@ -45,8 +45,8 @@ const SearchPage = () => {
       } catch (err) {}
     };
     if (
-      searchType === "Αναζήτηση βάσει υπαλλήλου" ||
-      searchType === "Αναζήτηση παραλαβών νταλίκας"
+      searchType === "Αναζήτηση βάσει οδηγού" ||
+      searchType === "Αναζήτηση παραλαβών φορτίου"
     ) {
       fetchCarList();
     }
@@ -65,18 +65,18 @@ const SearchPage = () => {
     formattedEndDate = formatDate(endDate);
 
     const dropDownOptions = {
-      "Αναζήτηση βάσει υπαλλήλου": "",
+      "Αναζήτηση βάσει οδηγού": "",
       "Αναζήτηση συνολικών φορτωμάτων": "/loads/total-car-loads",
-      "Αναζήτηση συνολικών καταστροφών υπαλλήλων":
+      "Αναζήτηση συνολικών καταστροφών οδηγών":
         "/destructions/total-car-destructions",
       "Αναζήτηση συνολικών επιστροφών": "/returns/total-car-returns",
       "Αναζήτηση καταστροφών αποθήκης":
         "/destructions/total-warehouse-destructions",
-      "Αναζήτηση παραλαβών νταλίκας": "/loads/single-car-loads?carid=1",
+      "Αναζήτηση παραλαβών φορτίου": "/loads/single-car-loads?carid=1",
     };
 
     const selectedOption = dropDownOptions[searchType];
-    if (selectedOption && searchType !== "Αναζήτηση παραλαβών νταλίκας") {
+    if (selectedOption && searchType !== "Αναζήτηση παραλαβών φορτίου") {
       history.push(
         `${selectedOption}?startdate=${formattedStartDate}&enddate=${formattedEndDate}`
       );
@@ -109,10 +109,10 @@ const SearchPage = () => {
   const renderForm = () => {
     switch (searchType) {
       case "Αναζήτηση συνολικών φορτωμάτων":
-      case "Αναζήτηση συνολικών καταστροφών υπαλλήλων":
+      case "Αναζήτηση συνολικών καταστροφών οδηγών":
       case "Αναζήτηση συνολικών επιστροφών":
       case "Αναζήτηση καταστροφών αποθήκης":
-      case "Αναζήτηση παραλαβών νταλίκας":
+      case "Αναζήτηση παραλαβών φορτίου":
         return (
           <>
             <div className="search-container__content-title">
@@ -143,7 +143,7 @@ const SearchPage = () => {
             </div>
           </>
         );
-      case "Αναζήτηση βάσει υπαλλήλου":
+      case "Αναζήτηση βάσει οδηγού":
         return (
           <>
             <select
@@ -239,8 +239,8 @@ const SearchPage = () => {
           <option value="Αναζήτηση συνολικών φορτωμάτων">
             Αναζήτηση συνολικών φορτωμάτων
           </option>
-          <option value="Αναζήτηση συνολικών καταστροφών υπαλλήλων">
-            Αναζήτηση συνολικών καταστροφών υπαλλήλων
+          <option value="Αναζήτηση συνολικών καταστροφών οδηγών">
+            Αναζήτηση συνολικών καταστροφών οδηγών
           </option>
           <option value="Αναζήτηση καταστροφών αποθήκης">
             Αναζήτηση καταστροφών αποθήκης
@@ -248,11 +248,9 @@ const SearchPage = () => {
           <option value="Αναζήτηση συνολικών επιστροφών">
             Αναζήτηση συνολικών επιστροφών
           </option>
-          <option value="Αναζήτηση βάσει υπαλλήλου">
-            Αναζήτηση βάσει υπαλλήλου
-          </option>
-          <option value="Αναζήτηση παραλαβών νταλίκας">
-            Αναζήτηση παραλαβών νταλίκας
+          <option value="Αναζήτηση βάσει οδηγού">Αναζήτηση βάσει οδηγού</option>
+          <option value="Αναζήτηση παραλαβών φορτίου">
+            Αναζήτηση παραλαβών φορτίου
           </option>
         </select>
         {renderForm()}

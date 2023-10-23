@@ -42,7 +42,7 @@ const SingleCarDestructionsList = (props) => {
     <div className="products-components__container-list">
       <Card>
         <h2>
-          ΚΑΤΑΣΤΡΟΦΕΣ ΥΠΑΛΛΗΛΟΥ <span>{props.carName}</span> ΑΠΟ{" "}
+          ΚΑΤΑΣΤΡΟΦΕΣ ΟΔΗΓΟΥ <span>{props.carName}</span> ΑΠΟ{" "}
           <span>{formattedStartDate}</span> ΕΩΣ <span>{formattedEndDate}</span>
         </h2>
       </Card>

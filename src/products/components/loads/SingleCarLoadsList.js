@@ -44,7 +44,7 @@ const SingleCarLoadsList = (props) => {
         props.carName !== "ΝΤΑΛΙΚΑ" ? (
           <Card>
             <h2>
-              ΦΟΡΤΩΜΑΤΑ ΟΧΗΜΑΤΟΣ <span>{props.carName}</span> ΑΠΟ{" "}
+              ΦΟΡΤΩΜΑΤΑ ΟΔΗΓΟΥ <span>{props.carName}</span> ΑΠΟ{" "}
               <span>{formattedStartDate}</span> ΕΩΣ{" "}
               <span>{formattedEndDate}</span>
             </h2>
@@ -52,7 +52,7 @@ const SingleCarLoadsList = (props) => {
         ) : (
           <Card>
             <h2>
-              ΠΑΡΑΛΑΒΕΣ ΝΤΑΛΙΚΑΣ ΑΠΟ <span>{formattedStartDate}</span> ΕΩΣ{" "}
+              ΠΑΡΑΛΑΒΕΣ ΦΟΡΤΙΟΥ ΑΠΟ <span>{formattedStartDate}</span> ΕΩΣ{" "}
               <span>{formattedEndDate}</span>
             </h2>
           </Card>
@@ -60,14 +60,14 @@ const SingleCarLoadsList = (props) => {
       ) : props.carName !== "ΝΤΑΛΙΚΑ" ? (
         <Card>
           <h2>
-            ΦΟΡΤΩΜΑΤΑ ΟΧΗΜΑΤΟΣ <span>{props.carName}</span> ΣΤΙΣ{" "}
+            ΦΟΡΤΩΜΑΤΑ ΟΔΗΓΟΥ <span>{props.carName}</span> ΣΤΙΣ{" "}
             <span>{formattedStartDate}</span>
           </h2>
         </Card>
       ) : (
         <Card>
           <h2>
-            ΠΑΡΑΛΑΒΕΣ ΝΤΑΛΙΚΑΣ ΣΤΙΣ <span>{formattedStartDate}</span>
+            ΠΑΡΑΛΑΒΕΣ ΦΟΡΤΙΟΥ ΣΤΙΣ <span>{formattedStartDate}</span>
           </h2>
         </Card>
       )}

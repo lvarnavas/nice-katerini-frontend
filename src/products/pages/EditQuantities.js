@@ -136,7 +136,7 @@ const EditQuantities = () => {
       return (
         <Card className="edit-quantities_title">
           <h2>
-            ΕΠΕΞΕΡΓΑΣΙΑ ΚΑΤΑΣΤΡΟΦΗΣ ΟΧΗΜΑΤΟΣ ΜΕ ΚΩΔΙΚΟ <span>{tid}</span>
+            ΕΠΕΞΕΡΓΑΣΙΑ ΚΑΤΑΣΤΡΟΦΗΣ ΟΔΗΓΟΥ ΜΕ ΚΩΔΙΚΟ <span>{tid}</span>
           </h2>
         </Card>
       );

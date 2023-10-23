@@ -38,17 +38,17 @@ const NavLinks = (props) => {
             <NavLink
               to={`/loads/single-car-loads?carid=1&startdate=${currentDate()}&enddate=${currentDate()}`}
             >
-              ΠΑΡΑΛΑΒΕΣ ΝΤΑΛΙΚΑΣ
+              ΠΑΡΑΛΑΒΕΣ ΦΟΡΤΙΟΥ
             </NavLink>
             <NavLink
               to={`/destructions/total-car-destructions?startdate=${currentDate()}&enddate=${currentDate()}`}
             >
-              ΚΑΤΑΣΤΡΟΦΕΣ ΥΠΑΛΛΗΛΩΝ
+              ΚΑΤΑΣΤΡΟΦΕΣ ΟΔΗΓΩΝ
             </NavLink>
             <NavLink
               to={`/destructions/total-warehouse-destructions?startdate=${currentDate()}&enddate=${currentDate()}`}
             >
-              ΚΑΤΑΣΤΡΟΦΕΣ ΑΠΟΘΗΚΗΣ
+              ΛΙΑΝΙΚΗ ΠΩΛΗΣΗ
             </NavLink>
             <NavLink
               to={`/returns/total-car-returns?startdate=${currentDate()}&enddate=${currentDate()}`}

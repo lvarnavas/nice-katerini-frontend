@@ -109,10 +109,7 @@ const AddEntry = () => {
     event.preventDefault();
     const formattedDate = formatDate(date);
 
-    if (
-      selectedOption === "Φόρτωμα" ||
-      selectedOption === "Παραλαβή νταλίκας"
-    ) {
+    if (selectedOption === "Φόρτωμα" || selectedOption === "Παραλαβή φορτίου") {
       try {
         setShowSuccessModal(false);
         await sendRequest(
@@ -229,7 +226,7 @@ const AddEntry = () => {
           date
         )}&enddate=${formatDate(date)}`
       );
-    } else if (selectedOption === "Παραλαβή νταλίκας") {
+    } else if (selectedOption === "Παραλαβή φορτίου") {
       history.push(
         `/loads/single-car-loads?carid=1&startdate=${formatDate(
           date
@@ -264,7 +261,7 @@ const AddEntry = () => {
           <option value="Επιστροφή">Επιστροφή</option>
           <option value="Καταστροφή">Καταστροφή</option>
           <option value="Καταστροφή αποθήκης">Καταστροφή αποθήκης</option>
-          <option value="Παραλαβή νταλίκας">Παραλαβή νταλίκας</option>
+          <option value="Παραλαβή φορτίου">Παραλαβή φορτίου</option>
         </select>
         {selectedOption && (
           <>
@@ -330,10 +327,10 @@ const AddEntry = () => {
               </>
             )}
             {selectedOption !== "Καταστροφή αποθήκης" &&
-              selectedOption !== "Παραλαβή νταλίκας" && (
+              selectedOption !== "Παραλαβή φορτίου" && (
                 <select value={selectedCar} onChange={handleCarSelect}>
                   <option value="" disabled>
-                    Επιλογή υπαλλήλου
+                    Επιλογή οδηγού
                   </option>
                   {carList.map((car) => (
                     <option key={car.id} value={car.id}>

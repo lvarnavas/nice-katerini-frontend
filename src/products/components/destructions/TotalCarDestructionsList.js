@@ -8,7 +8,7 @@ const TotalCarDestructionsList = (props) => {
     return (
       <div className="products-components__container-list">
         <Card>
-          <h2>ΔΕΝ ΒΡΕΘΗΚΑΝ ΚΑΤΑΣΤΡΟΦΕΣ ΥΠΑΛΛΗΛΩΝ</h2>
+          <h2>ΔΕΝ ΒΡΕΘΗΚΑΝ ΚΑΤΑΣΤΡΟΦΕΣ ΟΔΗΓΩΝ</h2>
         </Card>
       </div>
     );
@@ -39,9 +39,8 @@ const TotalCarDestructionsList = (props) => {
       {formattedStartDate !== formattedEndDate ? (
         <Card>
           <h2>
-            ΣΥΝΟΛΙΚΕΣ ΚΑΤΑΣΤΡΟΦΕΣ ΥΠΑΛΛΗΛΩΝ ΑΠΟ{" "}
-            <span>{formattedStartDate}</span> ΕΩΣ{" "}
-            <span>{formattedEndDate}</span>
+            ΣΥΝΟΛΙΚΕΣ ΚΑΤΑΣΤΡΟΦΕΣ ΟΔΗΓΩΝ ΑΠΟ <span>{formattedStartDate}</span>{" "}
+            ΕΩΣ <span>{formattedEndDate}</span>
           </h2>
         </Card>
       ) : (
