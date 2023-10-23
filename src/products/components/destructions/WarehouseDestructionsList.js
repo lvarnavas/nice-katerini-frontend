@@ -8,7 +8,7 @@ const WarehouseDestructionsList = (props) => {
     return (
       <div className="products-components__container-list">
         <Card>
-          <h2>ΔΕΝ ΒΡΕΘΗΚΑΝ ΚΑΤΑΣΤΡΟΦΕΣ ΑΠΟΘΗΚΗΣ</h2>
+          <h2>ΔΕΝ ΒΡΕΘΗΚΕ ΛΙΑΝΙΚΗ ΠΩΛΗΣΗ</h2>
         </Card>
       </div>
     );
@@ -34,14 +34,14 @@ const WarehouseDestructionsList = (props) => {
       {formattedStartDate !== formattedEndDate ? (
         <Card>
           <h2>
-            ΣΥΝΟΛΙΚΕΣ ΚΑΤΑΣΤΡΟΦΕΣ ΑΠΟΘΗΚΗΣ ΑΠΟ <span>{formattedStartDate}</span>{" "}
+            ΣΥΝΟΛΙΚΕΣ ΠΩΛΗΣΕΙΣ ΛΙΑΝΙΚΗΣ ΑΠΟ <span>{formattedStartDate}</span>{" "}
             ΕΩΣ <span>{formattedEndDate}</span>
           </h2>
         </Card>
       ) : (
         <Card>
           <h2>
-            ΣΥΝΟΛΙΚΕΣ ΚΑΤΑΣΤΡΟΦΕΣ ΑΠΟΘΗΚΗΣ <span>{formattedStartDate}</span>
+            ΣΥΝΟΛΙΚΕΣ ΠΩΛΗΣΕΙΣ ΛΙΑΝΙΚΗΣ <span>{formattedStartDate}</span>
           </h2>
         </Card>
       )}

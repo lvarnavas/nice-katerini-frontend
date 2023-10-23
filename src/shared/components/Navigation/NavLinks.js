@@ -70,9 +70,7 @@ const NavLinks = (props) => {
       )}
       {!auth.isLoggedIn && (
         <li>
-          <a href="https://nicewh.gr" target="_blank" rel="noopener noreferrer">
-            ΑΠΟΘΗΚΗ ΘΕΣΣΑΛΟΝΙΚΗΣ
-          </a>
+          <a href="https://nicewh.gr">ΑΠΟΘΗΚΗ ΘΕΣΣΑΛΟΝΙΚΗΣ</a>
         </li>
       )}
       {!auth.isLoggedIn && (

@@ -144,7 +144,7 @@ const EditQuantities = () => {
       return (
         <Card className="edit-quantities_title">
           <h2>
-            ΕΠΕΞΕΡΓΑΣΙΑ ΚΑΤΑΣΤΡΟΦΗΣ ΑΠΟΘΗΚΗΣ ΜΕ ΚΩΔΙΚΟ <span>{tid}</span>
+            ΕΠΕΞΕΡΓΑΣΙΑ ΛΙΑΝΙΚΗΣ ΠΩΛΗΣΗΣ ΜΕ ΚΩΔΙΚΟ <span>{tid}</span>
           </h2>
         </Card>
       );

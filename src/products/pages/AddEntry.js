@@ -175,7 +175,7 @@ const AddEntry = () => {
         );
         setShowSuccessModal(true);
       } catch (err) {}
-    } else if (selectedOption === "Καταστροφή αποθήκης") {
+    } else if (selectedOption === "Λιανική πώληση") {
       setShowSuccessModal(false);
       try {
         await sendRequest(
@@ -220,7 +220,7 @@ const AddEntry = () => {
           date
         )}&enddate=${formatDate(date)}`
       );
-    } else if (selectedOption === "Καταστροφή αποθήκης") {
+    } else if (selectedOption === "Λιανική πώληση") {
       history.push(
         `/destructions/total-warehouse-destructions?startdate=${formatDate(
           date
@@ -260,12 +260,12 @@ const AddEntry = () => {
           <option value="Φόρτωμα">Φόρτωμα</option>
           <option value="Επιστροφή">Επιστροφή</option>
           <option value="Καταστροφή">Καταστροφή</option>
-          <option value="Καταστροφή αποθήκης">Καταστροφή αποθήκης</option>
+          <option value="Λιανική πώληση">Λιανική πώληση</option>
           <option value="Παραλαβή φορτίου">Παραλαβή φορτίου</option>
         </select>
         {selectedOption && (
           <>
-            {selectedOption === "Καταστροφή αποθήκης" && (
+            {selectedOption === "Λιανική πώληση" && (
               <>
                 <ErrorModal error={error} onClear={clearError} />
                 <form className="add-entry_spacer" onSubmit={submitHandler}>
@@ -326,7 +326,7 @@ const AddEntry = () => {
                 </form>
               </>
             )}
-            {selectedOption !== "Καταστροφή αποθήκης" &&
+            {selectedOption !== "Λιανική πώληση" &&
               selectedOption !== "Παραλαβή φορτίου" && (
                 <select value={selectedCar} onChange={handleCarSelect}>
                   <option value="" disabled>
@@ -339,7 +339,7 @@ const AddEntry = () => {
                   ))}
                 </select>
               )}
-            {selectedCar && selectedOption !== "Καταστροφή αποθήκης" && (
+            {selectedCar && selectedOption !== "Λιανική πώληση" && (
               <>
                 <ErrorModal error={error} onClear={clearError} />
                 <form className="add-entry_spacer" onSubmit={submitHandler}>
