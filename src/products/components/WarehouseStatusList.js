@@ -29,7 +29,6 @@ const WarehouseStatusList = (props) => {
               {/*<th>ID</th> */}
               <th>Όνομα Προίόντος</th>
               <th>Ποσότητα</th>
-              <th>Κατεστραμμένα</th>
             </tr>
           </thead>
           {props.items.map((warehouse) => {
@@ -39,7 +38,6 @@ const WarehouseStatusList = (props) => {
                 id={warehouse.product_id}
                 productName={warehouse.product_name}
                 quantity={warehouse.current_quantity}
-                totalQuantity={getDestructionStatus(warehouse.product_id)}
               />
             );
           })}

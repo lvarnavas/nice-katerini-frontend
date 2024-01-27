@@ -4,7 +4,6 @@ const WarehouseStatusItem = (props) => {
       <tr>
         <td>{props.productName}</td>
         <td>{props.quantity}</td>
-        <td>{props.totalQuantity}</td>
       </tr>
     </tbody>
   );
